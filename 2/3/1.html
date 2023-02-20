@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.45/vue.global.prod.js"></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- 局部组件的使用 -->
+		<!-- 在components中注册使用 -->
+		<div id="app"></div>
+		<script>
+			const todo = {
+				data() {
+					return {
+						title: '后盾人',
+					};
+				},
+				template: `<div>{{title}}</div>`,
+			};
+
+			const app = Vue.createApp({
+				components: { todo },
+				template: `<todo></todo>`,
+			});
+
+			app.mount('#app');
+		</script>
+	</body>
+</html>

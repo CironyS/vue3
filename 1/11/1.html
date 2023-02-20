@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://unpkg.com/vue@3.2.45/dist/vue.global.prod.js"></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 可以动态绑定属性 -->
+			<div :id="id">{{name}}</div>
+			<!-- 可以动态计算要渲染的值 -->
+			<div>{{n == 1 ? '后盾人':'向军'}}</div>
+			<!-- 是否要渲染dom -->
+			<div v-show="true">{{name}}---'123'</div>
+			<!-- 只渲染一次,改变时不进行重新渲染 -->
+			<div v-once>{{n == 1 ? '后盾人':'向军'}}</div>
+			<!-- 可以动态绑定属性名 -->
+			<a :[arg]="value">{{names}}</a>
+		</div>
+		<script src="1.js"></script>
+	</body>
+</html>

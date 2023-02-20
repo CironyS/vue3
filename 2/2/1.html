@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.45/vue.global.prod.js"></script>
+		<title>后盾人</title>
+	</head>
+	<body>
+		<!-- 全局组件的使用 -->
+		<div id="app">
+			<h3>引入组件:<hd-xj /></h3>
+		</div>
+		<script type="text/x-template" id="hdTemplate">
+			<h2>hd子组件</h2>
+		</script>
+
+		<script>
+			const app = Vue.createApp({
+				// template: `<div>根组件 -- <hd/> --  <hdXj/> </div>`,
+			});
+			app.component('hd', {
+				template: `#hdTemplate`,
+			});
+			app.component('hdXj', {
+				template: `<div>hdXj组件</div>`,
+			});
+			app.mount('#app');
+		</script>
+	</body>
+</html>
